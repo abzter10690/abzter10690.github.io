@@ -6,43 +6,164 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="animations.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 <script src="jquery-2.2.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-  $('#SubscribeButton').click( function() { 
+  $('#SubscribeButton').click( function() {
+    $('[data-toggle="tooltip"]').tooltip();   
     alert('How are you today !!!');
-    
   });
-  
 });
 </script>
 
+
 <style>
-    body {
-    background-image: url("08.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size:100% 100% ;
+
+.mycarouselclass {
+  height : 100% ;
 }
 
+img {
+  object-fit: cover;
+  overflow: hidden;
+    }
+
+body {
+  background-image: url("08.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size:100% 100% ;
+}
+
+.navbar-default {
+  background: rgba(0 ,0 ,0 ,1);
+}
+
+#jumbo1 {
+  background: rgba(200 ,54 ,54 ,0);
+}
+
+#searchbutton {
+  background: rgba(0 ,0 ,0 ,0);
+}
+
+@font-face {
+  font-family: microsoftFont;
+    src: url(segoeuil.ttf);
+}
+
+@font-face {
+  font-family: pacifico;
+  src: url(Pacifico.ttf);
+}
+
+div {
+  font-family: microsoftFont;
+  font-weight: bold;
+  
+}
+
+.name_hover {
+  background-color: #ffffff; 
+  font-weight: bold;
+  }
+
+.glyphicon.glyphicon-heart {
+    font-size: 20px;
+  color : red ;
+}
+
+.glyphicon_heart_hover {
+  color : red ;
+}
+
+#container1 {
+  color: black ;
+}
+
+
+#brandName , #name2 {
+  font-family: pacifico;
+}
+
+#brandName {
+  font-size: 28px;
+}
 </style>
+
 </head>
 <body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        
-      </a>
-    </div>
-  </div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" id="brandName">abzter</a>
+      </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li id="li1"><a href="#">Education <span class="sr-only">(current)</span></a></li>
+          <li id="li2"><a href="#">Skills</a></li>
+          <li class="dropdown" id="dropdown1">
+            <a href="http://google.com" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">TreeFinder</a></li>
+              <li><a href="#">Library Management System</a></li>
+              <li><a href="#">Automated Deployment of Ruby on Rails App</a></li>
+              <li><a href="#"></a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Twitter Sentiment Analysis</a></li>
+              <li><a href="#">Music Recommendation System</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Insurance Bundling App Prototype</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default" id="searchbutton"><span class="glyphicon glyphicon-search"></span></button>
+        </form>
+    
+        <ul class="nav navbar-nav navbar-right">
+        <!-- <li id="li3"><a href="#">Pictures</a></li> --> 
+          <li class="dropdown"><a href="#" ><span id="clockbox"></span></a></li>   
+          <li class="dropdown">
+            <a href="#" data-toggle="tooltip" title="Yes I Like it."><span class="glyphicon glyphicon-heart pulse" id="glyph1"></span></a>      
+          </li>
+          <li class="dropdown"><a href="#"><span class="badge">125</span></a></li>
+          <li class="dropdown" id="dropdown2">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pictures <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">NCSU Life</a></li>
+              <li><a href="#">New York Trip</a></li>
+              <li><a href="#">Mumbai Trip</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Nikah</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
-<div class="container">
-  <div class="jumbotron text-center">
-    <h1>ABZTER</h1>
+ 
+<div class="container" id="container1">
+  <div class="jumbotron text-center" id="jumbo1">
+    <h1 id="name2">abzter</h1>
     <p>I am currently designing the Website for an awesome user experience.</p>
     <p>Stay Tuned.</p>
     <form class="form-inline">
@@ -51,6 +172,49 @@ $(document).ready(function() {
     </form>
   </div>
 </div>
+
+
+<script type="text/javascript">
+
+  $('#searchbutton').hover(
+  function () {$('#searchbutton').css('background','rgba(256 ,256 , 256 ,1)');} , 
+  function () {$('#searchbutton').css('background','rgba(256 ,256 , 256 ,0)');}
+  );
+  $('#dropdown1').hover(function(){$(this).toggleClass('active');});
+  $('#dropdown2').hover(function(){$(this).toggleClass('active');});
+  $('#li1').hover(function(){$(this).toggleClass('active');});
+  $('#li2').hover(function(){$(this).toggleClass('active');});
+  $('.glyphicon').hover(
+        function () {
+            $(this).addClass('glyphicon_heart_hover');
+        },
+        function () {
+            $(this).removeClass('glyphicon_heart_hover');
+        }
+    );
+</script>
+
+<script type="text/javascript">
+var tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+function GetClock(){
+var d=new Date();
+var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+if(nyear<1000) nyear+=1900;
+
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+if(nmin<=9) nmin="0"+nmin
+if(nsec<=9) nsec="0"+nsec;
+
+document.getElementById('clockbox').innerHTML=""+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
+}
+
+window.onload=function(){
+GetClock();
+setInterval(GetClock,1000);
+}
+</script>
+
 
 
 
