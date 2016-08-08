@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: msf;
+  src: url(segoeuil.ttf);
+}
+
+
+body {
+  /*background: url('abzter-bg.jpg') no-repeat;*/
+  background: #fff;
+  font-family: msf ;
+  /*background-attachment: fixed;*/
+}
+
+.navbar {
+  position: fixed;
+}
+
+.para {
+  font-size: 40px:
+}
+
+.panel {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 50px ;
+}
+
+.card {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#brand {
+  margin-left: 5px ;
+  font-family: 'Pacifico', cursive;
+  font-size: 32px ;
+  color: #000 ;
+}
+/*#navigation-header {
+  height: 50px;
+  width: auto;
+  background: #607D8B ;
+}*/
+#sidebar-wrapper {
+  /*z-index: -1;*/
+  /*background: #263238 ;*/
+  width: 250px;
+  position: fixed;
+  top: 50px ;
+  left: 0px ;
+  right: 0 ;
+  bottom: 0px ;
+  padding: 30px ;
+
+
+}
+#sidebar-wrapper ul{
+  list-style: none;
+  font-family: msf;
+}
+#sidebar-wrapper ul li{
+  padding: 5px;
+  font-size: 16px ;
+  margin-bottom: 16px ;
+  color: #000 ;
+  transition: 0.5s;
+}
+
+.list-navigation:hover{
+  padding-left: 25px;
+  background: #ffffff ;
+
+  /*border-left: 4px solid #000 ;*/
+}
+
+
+#sidebar-wrapper ul a{
+  text-decoration: none;
+  color: #000 ;
+  font-family: msf;
+  font-size: 20px;
+  transition: .1s;
+}
+
+#sidebar-wrapper ul a:hover{
+
+}
+
+#page-content-wrapper {
+  /*background: #CFD8DC ;*/
+  position: relative;
+  margin-left: 250px ;
+}
+
+#email-con {
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+h3 {
+  font-size:
+}
+
+#education {
+  margin-top: 20px;
+}
